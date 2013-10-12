@@ -1,6 +1,8 @@
 Ubuntu Cinnamon Setup Scripts
 ==========================
 
+This file is a little messy at the moment, I have to learn how to use markdown and then make the required changes.
+
 preconf.sh
 prompt for your sudo password
 set executable permissions on each of the other scripts
