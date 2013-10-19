@@ -1,5 +1,7 @@
 <h1>Ubuntu Cinnamon Setup Scripts</h1>
 
+<p><strong>NOTE:</strong> I am currently in the process of completely rewriting this set of scripts. Expect V2 very soon!</p>
+
 <h2>How to use</h2>
 
 <ol>
