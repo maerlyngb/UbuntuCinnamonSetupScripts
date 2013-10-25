@@ -41,7 +41,7 @@
 
 <hr />
 
-<p>Here is a brief run down of what is done in each file:</p>
+<h3>What Does Each File Do?</h3>
 <h4>preconf.sh</h4>
 <ol>
 <li>prompt for your sudo password</li>
