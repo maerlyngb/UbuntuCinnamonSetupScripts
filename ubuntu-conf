@@ -42,7 +42,7 @@ clear
 if prompt "  Would you like to remove some unwanted software?"; then
 
     #TODO: Write software descriptions
-    rmsteps=('remove-games' 'remove-thunderbird' 'remove-empathy' 'remove-totem' 'remove-landscape-client-ui-install' 'remove-orca' 'remove-onboard' 'gnome-contacts' 'remove-tranmission' 'remove-gnome-control-center-signon' 'remove-xterm' 'autoremove')
+    rmsteps=('remove-games' 'remove-thunderbird' 'remove-empathy' 'remove-totem' 'remove-landscape-client-ui-install' 'remove-orca' 'remove-onboard' 'remove-contacts' 'remove-tranmission' 'remove-gnome-control-center-signon' 'remove-xterm' 'autoremove')
 
     for step in "${rmsteps[@]}"; do
         chmod u+x ."$dir/$step"

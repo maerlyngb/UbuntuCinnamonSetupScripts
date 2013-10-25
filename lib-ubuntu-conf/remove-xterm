@@ -12,6 +12,6 @@ echo "
       xterm
 "
 
-if prompt "  Would you like to remove Transmission?"; then
+if prompt "  Would you like to remove xTerm?"; then
     echo $pwd | sudo apt-get purge -y xterm
 fi
