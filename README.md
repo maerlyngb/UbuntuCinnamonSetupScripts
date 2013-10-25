@@ -12,7 +12,7 @@
 <li>open up the terminal and browse to the folder containing the scripts</li>
 <li>$ chmod u+x ubuntu-conf</li>
 <li>$ ./ubuntu-conf</li>
-<li>Follow the on-screek instructions</li>
+<li>Follow the on-screen instructions</li>
 </ol>
 
 <br />
