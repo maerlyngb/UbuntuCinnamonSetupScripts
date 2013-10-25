@@ -1,0 +1,14 @@
+#!/bin/bash
+
+clear 
+
+echo " 
+
+  REMOVE remote login
+  -------------------
+
+"
+
+if prompt "  Would you like to remove remote login?"; then
+    echo greeter-show-remote-login=false | sudo tee -a /etc/lightdm/lightdm.conf.d/50-unity-greeter.conf
+fi

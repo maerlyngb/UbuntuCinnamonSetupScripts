@@ -1,0 +1,29 @@
+#!/bin/bash
+
+clear 
+
+echo " 
+
+  INSTALL Chromium
+  ----------------
+
+  Chromium is the open source version of Google Chrome. Chromium and Chrome
+  are very similar although Chromium lacks a built in PDF viewer and a built
+  in version of Adobe Flash.
+
+  Find out more: chromium.org
+
+
+  If you choose to do this, the following package will be installed:
+
+      chromium-browser
+
+  
+  Note: additional packages listed as dependencies will also be installed.
+
+"
+
+if prompt "  Would you like to install Chromium"; then
+    echo $pwd | sudo apt-get install -y chromium-browser
+fi
+

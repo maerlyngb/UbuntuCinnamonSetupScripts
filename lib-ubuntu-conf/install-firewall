@@ -1,0 +1,35 @@
+#!/bin/bash
+
+clear 
+
+echo " 
+
+  INSTALL Gufw Firewall
+  ------------------------------------
+  Gufw firewall is a simple firewall that is designed to block malicious
+  programs and users from accessing content on your computer.
+  
+  Find out more: gufw.org
+
+  If you choose to do this, the following package will be installed:
+
+      gufw
+
+  
+  Note: additional packages listed as dependencies will also be installed.
+
+"
+
+if prompt "  Would you like to install Gufu Firewall?"; then
+    echo $pwd | sudo -S apt-get -y install gufw
+    clear
+    echo "
+  IMPORTANT: After this script has completed, please open Gufw firewall
+             in order to turn it on.
+
+  Hit any key to continue..."
+
+    read -n1
+fi
+
+

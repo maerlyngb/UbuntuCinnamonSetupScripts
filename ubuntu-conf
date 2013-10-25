@@ -1,0 +1,71 @@
+#!/bin/bash
+
+dir="/lib-ubuntu-conf"
+
+chmod u+x .$dir/welcome
+
+#Check to see if the user wants to run this script
+if ! . .$dir/welcome ; then
+    clear
+    exit 0
+fi
+
+read -s -p "[sudo] password for $USER: " pwd
+
+#check internet connection
+. .$dir/check-internet-connection
+
+if ! checkinternetconnection; then
+    echo "  You do not seem to have an active internet connection."
+    echo "  Please try again later."
+    exit 0
+fi
+
+#Import prompt function
+. .$dir/prompt
+
+clear
+if prompt "  Would you like to install some new software?"; then
+
+inststeps=('install-chromium' 'install-deluge' 'install-firewall' 'install-gimp' 'install-shutter' 'install-virtualbox' 'install-vlc' 'install-wine')
+
+    for step in "${inststeps[@]}"; do
+        chmod u+x ."$dir/$step"
+        . .$dir/$step
+    done
+
+  #syspeek
+  #virtualbox-indicator
+fi
+
+clear
+if prompt "  Would you like to remove some unwanted software?"; then
+
+    #TODO: Write software descriptions
+    rmsteps=('remove-games' 'remove-thunderbird' 'remove-empathy' 'remove-totem' 'remove-landscape-client-ui-install' 'remove-orca' 'remove-onboard' 'gnome-contacts' 'remove-tranmission' 'remove-gnome-control-center-signon' 'remove-xterm' 'autoremove')
+
+    for step in "${rmsteps[@]}"; do
+        chmod u+x ."$dir/$step"
+        . .$dir/$step
+    done
+fi
+
+clear
+if prompt "  Would you like to perform some basic system tweaks?"; then
+
+    twsteps=('disable-guest' 'remove-login-dots' 'disable-overlay-scrollbars' 'show-username' 'move-min-max-buttons' 'remove-remote-login')
+
+    for step in "${twsteps[@]}"; do
+        chmod u+x ."$dir/$step"
+        . .$dir/$step
+    done
+fi
+
+#TODO: return value - if true ask to remove unity
+. .$dir/install-cinnamon
+
+. .$dir/update-system
+
+. .$dir/complete
+
+exit 0

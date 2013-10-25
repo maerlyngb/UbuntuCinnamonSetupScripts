@@ -1,0 +1,32 @@
+#!/bin/bash
+
+clear
+
+echo "
+
+                           .oyhhs:      Welcome to Ubuntu GNU/Linux!
+                  ..--.., shhhhhh-   
+                -+++++++++\`:yyhhyo\`     This configuration script has been
+           .--  -++++++++/-.-::-\`       designed to help you configure your 
+         .::::-   :-----:/+++/++/.      new Ubuntu installation, as well as 
+        -:::::-.          .:++++++:     perform some system tweaks in order 
+   ,,, .:::::-\`             .++++++-    give you the best possible Ubuntu 
+ ./+++/-\`-::-                ./////:    experience.
+ +++++++ .::-                        
+ ./+++/-\`-::-                :yyyyyo    What you will need:
+   \`\`\` \`-::::-\`             :yhhhhh:     - An active internet connection.
+        -:::::-.         \`-ohhhhhh+      - Your administrator [sudo] password.
+         .::::-\` -o+///+oyhhyyyhy:       
+          \`.--  /yhhhhhhhy+,....     
+                /hhhhhhhhh-.-:::;       
+                \`.:://::- -:::::;       When you are ready, press any key
+                          \`.-:-'        to continue, or press \"q\" to quit.
+
+"
+                                           
+                                    
+
+read -n1 a
+if [[ ${a^} = 'Q' ]]; then 
+    exit 1
+fi

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+
+clear 
+
+echo " 
+
+  REMOVE White dots on the login screen
+  -------------------------------------
+  By default, the Ubuntu login screen is covered in a grid of small white
+  dots covering the wallpaper. Removing them is purely personal preference.
+
+"
+
+if prompt "  Would you like to remove the white dots on the login screen?"; then
+echo $pwd | sudo xhost +SI:localuser:lightdm
+echo $pwd | sudo su lightdm -s /bin/bash -c 'gsettings set com.canonical.unity-greeter draw-grid false'
+fi

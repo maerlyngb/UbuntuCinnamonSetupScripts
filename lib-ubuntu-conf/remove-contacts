@@ -1,0 +1,17 @@
+#!/bin/bash
+
+clear 
+
+echo " 
+
+  REMOVE Contacts
+  ------------------------------------
+  
+  If you choose to do this, the following package will be removed:
+
+      contacts
+"
+
+if prompt "  Would you like to remove gnome-contacts?"; then
+    echo $pwd | sudo apt-get purge -y gnome-contacts
+fi

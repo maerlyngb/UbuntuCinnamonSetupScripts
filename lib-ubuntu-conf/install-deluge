@@ -1,0 +1,27 @@
+#!/bin/bash
+
+clear 
+
+echo " 
+
+  INSTALL Deluge Torrent Downloader
+  ---------------------------------
+
+  By defailt, Ubuntu comes preinstalled with the Transmission torrent client.
+  Deluge offers more features and customisation options alosng with an 
+  interface that will feel more familiar to uTorrent users.
+
+  Find out more: deluge-torrent.org
+
+  If you choose to do this, the following package will be installed:
+
+      deluge
+
+  
+  Note: additional packages listed as dependencies will also be installed.
+
+"
+
+if prompt "  Would you like to install Deluge?"; then
+    echo $pwd | sudo apt-get install -y deluge
+fi

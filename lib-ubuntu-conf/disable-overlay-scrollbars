@@ -1,0 +1,15 @@
+#!/bin/bash
+
+clear 
+
+echo " 
+
+  DISABLE Overlay Scrollbars
+  --------------------------
+
+
+"
+
+if prompt "  Would you like to disable overlay scrollbars?"; then
+    gsettings set com.canonical.desktop.interface scrollbar-mode normal
+fi

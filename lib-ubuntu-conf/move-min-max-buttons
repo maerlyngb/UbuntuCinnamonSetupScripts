@@ -1,0 +1,14 @@
+#!/bin/bash
+
+clear 
+
+echo " 
+
+  MOVE Minimize, Maximize and Close Buttons to the Right
+  ----------------------------
+
+"
+
+if prompt "  Would you like to disable the Ubuntu guest account?"; then
+    gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
+fi

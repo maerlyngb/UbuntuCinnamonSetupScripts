@@ -1,0 +1,27 @@
+#!/bin/bash
+
+clear 
+
+echo " 
+
+  INSTALL Wine
+  ------------
+
+  Wine is a free and open source software application that aims to
+  allow applications designed for Microsoft Windows to run on Unix-like
+  operating systems. NOTE: this does not work for all programs.
+
+  Find out more: winehq.org
+
+  If you choose to do this, the following package will be installed:
+
+      wine winetricks
+
+  
+  Note: additional packages listed as dependencies will also be installed.
+
+"
+
+if prompt "  Would you like to install Wine?"; then
+    echo $pwd | sudo apt-get install -y wine winetricks
+fi

@@ -1,0 +1,27 @@
+#!/bin/bash 
+
+clear 
+
+echo " 
+
+  INSTALL Virtualbox
+  ------------------
+
+  Oracle VM VirtualBox is a virtualisation software package for 
+  x86 and AMD64/Intel64-based computers from Oracle Corporation as
+  part of its family of virtualization products.
+
+  Find out more: virtualbox.org
+
+  If you choose to do this, the following package will be installed:
+
+      virtualbox
+
+  
+  Note: additional packages listed as dependencies will also be installed.
+
+"
+
+if prompt "  Would you like to install Virtualbox?"; then
+    echo $pwd | sudo apt-get install -y virtualbox
+fi

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+clear 
+
+echo " 
+
+  SHOW username on 'task bar'
+  ---------------------------
+
+"
+
+if prompt "  Would you like to show your username on the 'task bar'?"; then
+    gsettings set com.canonical.indicator.session show-real-name-on-panel true
+fi

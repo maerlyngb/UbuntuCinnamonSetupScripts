@@ -1,0 +1,28 @@
+#!/bin/bash 
+
+clear 
+
+echo " 
+
+  INSTALL VLC Media Player
+  ------------------------
+
+  VLC media player is an open-source, cross-platform multimedia player
+  and framework which can also stream audo and video in a number of
+  different formats.
+
+  Find out more: videolan.org
+
+
+  If you choose to do this, the following package will be installed:
+
+      vlc browser-plugin-vlc
+
+  
+  Note: additional packages listed as dependencies will also be installed.
+
+"
+
+if prompt "  Would you like to install VLC?"; then
+    echo $pwd | sudo apt-get install -y vlc browser-plugin-vlc
+fi

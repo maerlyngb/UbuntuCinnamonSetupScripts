@@ -1,0 +1,17 @@
+#!/bin/bash
+
+clear 
+
+echo " 
+
+  REMOVE Gnome Games
+  ------------------
+  
+  If you choose to do this, the following package will be removed:
+
+      gnome-sudoku gnome-mines gnome-mahjongg aisleriot
+"
+
+if prompt "  Would you like to remove games?"; then
+    echo $pwd | sudo apt-get purge -y gnome-sudoku gnome-mines gnome-mahjongg aisleriot
+fi

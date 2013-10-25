@@ -1,0 +1,17 @@
+#!/bin/bash
+
+clear 
+
+echo " 
+
+  REMOVE Empathy
+  --------------------------
+  
+  If you choose to do this, the following package will be removed:
+
+      empathy
+"
+
+if prompt "  Would you like to remove empathy?"; then
+    echo $pwd | sudo apt-get purge -y empathy
+fi

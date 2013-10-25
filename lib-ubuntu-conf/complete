@@ -1,0 +1,22 @@
+#!/bin/bash
+clear
+
+echo "
+   _____ ___ _   _ ___ ____  _   _ _____ ____  _ 
+  |  ___|_ _| \ | |_ _/ ___|| | | | ____|  _ \| |
+  | |_   | ||  \| || |\___ \| |_| |  _| | | | | |
+  |  _|  | || |\  || | ___) |  _  | |___| |_| |_|
+  |_|   |___|_| \_|___|____/|_| |_|_____|____/(_)
+
+
+  THANK YOU FOR USING THIS UBUNTU CONFIGURATION SCRIPT :)
+
+  If you would like to contribute to making this script better or
+  share it with your friends, please find the source online:
+
+  github.com/maerlyngb/UbuntuConfigurationScript
+
+  Hit any key to exit..."
+
+read -n1
+clear

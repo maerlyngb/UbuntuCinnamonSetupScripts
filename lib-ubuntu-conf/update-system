@@ -1,0 +1,25 @@
+#!/bin/bash
+
+clear 
+
+echo " 
+
+  UPDATE System
+  -------------
+
+  This will update all of the current software on your system
+
+  If you choose to do this, the following commands will be run:
+
+      sudo apt-get update
+      sudo apt-get upgrade
+
+  
+  Note: if you choose to do this, all current software will be updated.
+
+"
+
+if prompt "  Would you like to update your system?"; then
+    echo $pwd | sudo apt-get update -y
+    echo $pwd | sudo apt-get upgrade -y
+fi

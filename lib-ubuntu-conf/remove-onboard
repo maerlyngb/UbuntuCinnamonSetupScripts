@@ -1,0 +1,17 @@
+#!/bin/bash
+
+clear 
+
+echo " 
+
+  REMOVE Onboard
+  --------------
+  
+  If you choose to do this, the following package will be removed:
+
+      onboard
+"
+
+if prompt "  Would you like to remove Onboard?"; then
+    echo $pwd | sudo apt-get purge -y onboard
+fi

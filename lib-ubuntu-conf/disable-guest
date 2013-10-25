@@ -1,0 +1,16 @@
+#!/bin/bash
+
+clear 
+
+echo " 
+
+  DISABLE Ubuntu Guest Account
+  ----------------------------
+  By default, Ubuntu comes with a guest account to allow people to
+  login without having a user account.
+
+"
+
+if prompt "  Would you like to disable the Ubuntu guest account?"; then
+    echo allow-guest=false | sudo tee -a /etc/lightdm/lightdm.conf.d/50-unity-greeter.conf
+fi

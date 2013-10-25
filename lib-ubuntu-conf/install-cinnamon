@@ -1,0 +1,34 @@
+#!/bin/bash
+
+clear 
+
+echo " 
+
+  INSTALL Cinnamon Desktop Environment
+  ------------------------------------
+  The Cinnamon desktop envoronment provides a more traditional computing
+  experience and would allow users to feel right at home if they are 
+  migrating from Microsoft Windows. Cinnamon also comes with a powerful
+  window manager called Nemo which is more feature rich compared to the
+  default Ubuntu window manager.
+  
+  Find out more: cinnamon.linuxmint.com 
+
+  If you choose to do this, the following package will be installed:
+
+      cinnamon nemo
+
+  
+  Note: additional packages listed as dependencies will also be installed.
+
+"
+
+if prompt "  Would you like to install the Cinnamon desktop environment?"; then
+    echo $pwd | sudo -S add-apt-repository -y ppa:gwendal-lebihan-dev/cinnamon-stable
+    echo $pwd | sudo -S apt-get update
+    echo $pwd | sudo -S apt-get -y install cinnamon nemo
+
+    xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search
+    gsettings set org.gnome.desktop.background show-desktop-icons false
+    gsettings set org.nemo.desktop show-desktop-icons true
+fi

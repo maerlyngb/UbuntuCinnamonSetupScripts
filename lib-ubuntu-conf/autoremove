@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo $pwd | sudo apt-get -y autoremove

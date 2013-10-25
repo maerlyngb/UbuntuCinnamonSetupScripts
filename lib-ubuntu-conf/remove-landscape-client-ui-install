@@ -1,0 +1,17 @@
+#!/bin/bash
+
+clear 
+
+echo " 
+
+  REMOVE Landscape Client UI Installer
+  ------------------------------------
+  
+  If you choose to do this, the following package will be removed:
+
+      landscape-client-ui-install
+"
+
+if prompt "  Would you like to remove Landscape Client UI Installer?"; then
+    echo $pwd | sudo apt-get purge -y landscape-client-ui-install
+fi

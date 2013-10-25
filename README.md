@@ -1,8 +1,23 @@
-<h1>Ubuntu Cinnamon Setup Scripts</h1>
+<h1>Ubuntu Configuration Script v2 BETA</h1>
 
-<p><strong>NOTE:</strong> I am currently in the process of completely rewriting this set of scripts. Expect V2 very soon!</p>
+<p>This new version is a beta release which has been completely re-written to give the user more control of what programs are added and removed as well as what system tweaks are performed.</p>
+
+<p>Inspiration for this new version was taken from the cb-welcome script which is included in <a href="http://crunchbang.org/">Crunchbang Linux.</a></p>
 
 <h2>How to use</h2>
+
+<ol>
+<li>open up the terminal and browse to the folder containing the scripts</li>
+<li>$ chmod u+x ubuntu-conf</li>
+<li>$ ./ubuntu-conf</li>
+<li>Follow the on-screek instructions</li>
+</ol>
+
+<hr />
+
+<h2>OLD Verson</h2>
+
+<h3>How to use</h3>
 
 <ol>
 <li>open up the terminal and browse to the folder containing the scripts</li>
@@ -24,20 +39,20 @@
 <hr />
 
 <p>Here is a brief run down of what is done in each file:</p>
-<h3>preconf.sh</h3>
+<h4>preconf.sh</h4>
 <ol>
 <li>prompt for your sudo password</li>
 <li>set executable permissions on each of the other scripts</li>
 <li>run ci.sh</li>
 </ol>
 
-<h3>ci.sh</h3>
+<h4>ci.sh</h4>
 <ol>
 <li>Install Cinnamon and Nemo</li>
 <li>Make Nemo the default window manager</li>
 </ol>
 
-<h3>conf.sh</h3>
+<h4>conf.sh</h4>
 <ol>
 <li>prompt for your sudo password</li>
 <li>run rmu.sh</li>
@@ -46,7 +61,7 @@
 <li>run i.sh</li>
 </ol>
 
-<h3>rmu.sh</h3>
+<h4>rmu.sh</h4>
 <ol>
 <li>remove unity</li>
 <li>remove thunderbird unity extensions</li>
@@ -56,7 +71,7 @@
 <li>remove config folders</li>
 </ol>
 
-<h3>rms.sh</h3>
+<h4>rms.sh</h4>
 <ol>
 <li>remove gnome-contacts</li>
 <li>remove ubuntu one</li>
@@ -73,14 +88,14 @@
 <li>run apt-get autoremove</li>
 </ol>
 
-<h3>t.sh</h3>
+<h4>t.sh</h4>
 <ol>
 <li>remove all ubuntu online search suggestions</li>
 <li>block access to ubuntu search suggestion servers</li>
 <li>disable the guest account</li>
 </ol>
 
-<h3>i.sh</h3>
+<h4>i.sh</h4>
 <ol>
 <li>install wine</li>
 <li>install wine tricks</li>

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+clear 
+
+echo " 
+
+  REMOVE Orca
+  ------------------------------------
+  
+  If you choose to do this, the following package will be removed:
+
+      gnome-orca
+
+"
+
+if prompt "  Would you like to remove gnome-orca?"; then
+    echo $pwd | sudo apt-get purge -y gnome-orca
+fi

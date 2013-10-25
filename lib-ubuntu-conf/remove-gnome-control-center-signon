@@ -1,0 +1,17 @@
+#!/bin/bash
+
+clear 
+
+echo " 
+
+  REMOVE Online Accounts
+  ----------------------
+  
+  If you choose to do this, the following package will be removed:
+
+      gnome-control-center-signon
+"
+
+if prompt "  Would you like to remove Online Accounts?"; then
+    echo $pwd | sudo apt-get purge -y gnome-control-center-signon
+fi
