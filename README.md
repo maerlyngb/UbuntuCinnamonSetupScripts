@@ -2,7 +2,7 @@
 
 <p>This new version is a beta release which has been completely re-written to give the user more control of what programs are added and removed as well as what system tweaks are performed.</p>
 
-<p>Designed for Ubuntu 13.10</p>
+<p><strong>Designed for Ubuntu 13.10</srong></p>
 
 <p>Inspiration for this new version was taken from the cb-welcome script which is included in <a href="http://crunchbang.org/">Crunchbang Linux.</a></p>
 
